@@ -82,6 +82,12 @@ section[id*="secImg"] div{
 
 #secImgGallery div{ flex: 0 1 31%;  }
 
+#secImgGallery div:nth-child(1){  filter: blur(10px); }
+
+#secImgGallery div:nth-child(even){ filter: grayscale(100%); }
+
+#secImgGallery div:nth-child(3){ filter: sepia() }
+
 footer{
   background-color: #C6d5c5;
   border-radius: 0px 0px 10px 10px;
@@ -112,7 +118,9 @@ footer a{
   picture img{
     max-width: 100%;
   }
-  #secImg2{
+  #secImg2{ flex-direction: column; }
+  #secImgGallery div{
+    flex: 0 1 100%;
     flex-direction: column;
   }
   footer div{
