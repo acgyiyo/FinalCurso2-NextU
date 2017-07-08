@@ -56,9 +56,27 @@ header a[href="#"]{
 picture img{
   max-width: 700px;
 }
-#secImg1{
+
+section[id*="secImg"]{
   text-align: center;
+  padding: 4%;
+}
+section[id*="secImg"] div{
+  padding: 1%;
+}
+
+#secImg1{
   background-color: #82c3a6;
+}
+
+#secImg2{
+  display: flex;
+  flex-direction: row;
+  background-color: #d5c75f;
+  border: 1px;
+}
+#secImg2 img{
+  width: 100%;
 }
 
 @media (max-width:900px){
@@ -71,5 +89,8 @@ picture img{
   }
   picture img{
     max-width: 100%;
+  }
+  #secImg2{
+    flex-direction: column;
   }
 }
