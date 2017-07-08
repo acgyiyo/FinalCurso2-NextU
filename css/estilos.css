@@ -8,13 +8,9 @@
   font-weight: bold;
 }
 
-*{
-  font-family: DancingScript
-}
+*{  font-family: DancingScript; }
 
-body{
-  background-color: #02010a;
-}
+body{ background-color: #02010a;  }
 
 #contenido{
   width: 900px;
@@ -30,9 +26,7 @@ header{
   width: inherit;
 }
 
-header div{
-  color: white;
-}
+header div{ color: white; }
 
 #head1{
   float: left;
@@ -44,18 +38,11 @@ header div{
   margin-top: 10vh;
 }
 
-header a{
-  color:white;
-}
+a{  color:white;  }
 
-header a[href="#"]{
-    text-decoration: none;
-    color: white;
-}
+a[href="#"]{  text-decoration: none;  }
 
-picture img{
-  max-width: 700px;
-}
+picture img{  max-width: 700px; }
 
 section[id*="secImg"]{
   text-align: center;
@@ -65,18 +52,53 @@ section[id*="secImg"] div{
   padding: 1%;
 }
 
-#secImg1{
-  background-color: #82c3a6;
-}
+#secImg1{ background-color: #82c3a6;  }
 
-#secImg2{
+#secImg2,#secImgGallery{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: #d5c75f;
   border: 1px;
 }
-#secImg2 img{
-  width: 100%;
+#secImg2 div{flex: 0 1 48%;}
+
+#secImg2 img, #secImgGallery img{ width: 100%; }
+
+#secImg2 div img{
+  transition-duration: 1s;
+  box-shadow: 2px 2px black;
+}
+
+#secImg2 div:nth-child(1) img:hover{
+  transform: rotate(10deg);
+  transition-duration: 1s;
+}
+
+#secImg2 div:nth-child(2) img:hover{
+  transform: translate(20px, -5px);
+  transition-duration: 1s;
+}
+
+#secImgGallery div{ flex: 0 1 31%;  }
+
+footer{
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0% 0% 4% 4%;
+}
+footer div{
+  flex: 0 1 25%;
+}
+footer img{
+  width: 15px;
+}
+footer a{
+  color: black !important;
 }
 
 @media (max-width:900px){
@@ -93,4 +115,8 @@ section[id*="secImg"] div{
   #secImg2{
     flex-direction: column;
   }
+  footer div{
+    flex: 0 1 100%;
+  }
+
 }
